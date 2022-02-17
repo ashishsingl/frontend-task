@@ -1,0 +1,54 @@
+.tableRow_tbContainer {
+  display: flex;
+  height: 50px;
+  color: rgb(31, 30, 30);
+  min-width: 1200px;
+  /* overflow-x: scroll; */
+}
+.tableRow_checkboxContainer {
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tableRow_checkbox {
+  height: 16px;
+  width: 16px;
+}
+.tableRow_name {
+  width: 15%;
+  align-items: center;
+  display: flex;
+}
+.tableRow_company {
+  width: 15%;
+  align-items: center;
+  display: flex;
+}
+.tableRow_status {
+  width: 15%;
+  align-items: center;
+  display: flex;
+}
+.tableRow_lastUpdate {
+  width: 15%;
+  align-items: center;
+  display: flex;
+}
+.tableRow_notes {
+  width: 30%;
+  align-items: center;
+  display: flex;
+}
+.tableRow_remove {
+  width: 5%;
+  align-items: center;
+  display: flex;
+}
+.tableRow_remove {
+  background-color: white;
+  border: none;
+}
+.trash_icon {
+  font-size: large;
+}

@@ -1,0 +1,35 @@
+.home_mainContainer {
+  padding: 2rem;
+}
+.home_horizontal {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgb(104, 101, 101);
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+.home_mainHeading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(32, 30, 30);
+}
+.home_button {
+  background-color: #4b74ff;
+  color: white;
+  border: none;
+  border-radius: 0.9rem;
+  height: 2rem;
+  padding: 0 0.8rem;
+  margin-left: 1rem;
+  margin-top: 0.4rem;
+}
+
+@media screen and (max-width: 450px) {
+  .home_mainHeading {
+    font-size: 1.5rem;
+  }
+  .home_horizontal {
+    flex-direction: column;
+  }
+}
