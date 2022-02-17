@@ -6,13 +6,13 @@ import { useNavigate } from "react-router-dom";
 
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase-config";
-import { onAuthStateChanged } from "firebase/auth";
 
 const Navbar = ({ user }) => {
   const navigate = useNavigate();
 
   const logout = async () => {
     await signOut(auth);
+    localStorage.clear();
     navigate("/login");
   };
 

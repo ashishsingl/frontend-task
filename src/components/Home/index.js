@@ -11,9 +11,8 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
 
-const Home = () => {
+const Home = ({ user, setUser }) => {
   const [showModal, setShowModal] = useState(false);
-  const [user, setUser] = useState();
   const navigate = useNavigate();
 
   onAuthStateChanged(auth, (currentUser) => {
@@ -21,7 +20,7 @@ const Home = () => {
   });
 
   useEffect(() => {
-    user && navigate("/login");
+    !user && navigate("/login");
   }, []);
 
   const openModel = () => {

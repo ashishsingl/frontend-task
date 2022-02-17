@@ -7,8 +7,9 @@ import { useNavigate } from "react-router-dom";
 
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase-config";
+import { setStorage } from "../../helper/setStorage";
 
-const Login = () => {
+const Login = ({ setUser }) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState("");
@@ -20,6 +21,8 @@ const Login = () => {
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
       if (user) {
+        setUser(true);
+        setStorage(true);
         navigate("/");
       }
     } catch (error) {
